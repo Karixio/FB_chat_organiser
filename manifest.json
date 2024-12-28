@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "FB chat organizer",
+    "version": "1.0.0",
+    "description": "Tool to manage position of chat windows on Facebook",
+    "icons": {},
+    "permissions": ["tabs", "storage", "scripting", "activeTab"],
+    "host_permissions": ["https://www.facebook.com/*"],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "FB chat organizer"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.facebook.com/*"],
+            "js": ["service_worker.js"]
+        }
+    ]   
+}
